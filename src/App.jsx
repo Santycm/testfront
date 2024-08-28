@@ -6,11 +6,15 @@ export const App = () => {
   
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("https://naturaldreams.up.railway.app/api/employees", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },);
+      const response = await fetch(
+        "https://naturaldreams.up.railway.app/api/employees",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       setEmployees([...data]);
     };
